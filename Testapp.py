@@ -39,7 +39,7 @@ def cachable(dataframe):
     return dataframe, notInStock
 
 #gets the data from the cached function
-dataframe, notInStock = cachable(setupApi().replace(r'^\s*$', np.nan, regex=True)#converts empty spaces to NaN to avoid error)
+dataframe, notInStock = cachable(setupApi().replace(r'^\s*$', np.nan, regex=True))#converts empty spaces to NaN to avoid error
 
 #sidebar
 with st.sidebar:
